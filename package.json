@@ -1,0 +1,19 @@
+{
+  "name": "codility-tests",
+  "version": "1.0.0",
+  "description": "Learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "learning",
+    "codility"
+  ],
+  "author": "David Votrubec",
+  "license": "ISC",
+  "devDependencies": {
+    "fast-check": "^1.10.0",
+    "mocha": "^5.2.0"
+  }
+}
