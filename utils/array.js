@@ -17,6 +17,11 @@ function shuffle(array) {
     return array;
 }
 
+function fillArrayWithRange(maxValue) {
+  return Array.apply(null, {length: maxValue}).map(Number.call, Number);
+}
+
 module.exports = {
-    shuffle
+    shuffle,
+    fillArrayWithRange
 };
