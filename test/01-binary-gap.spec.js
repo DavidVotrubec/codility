@@ -10,8 +10,8 @@ describe('Binary Gap', function() {
       if (a == 0) {
         return true;
       }
-      console.log(a, solution(a));
-      console.log('');
+      // console.log(a, solution(a));
+      // console.log('');
       return true;
     }
   ))

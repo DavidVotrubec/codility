@@ -11,7 +11,7 @@ describe('Odd occurences in Array', function() {
       fc.nat(10000), function(arrLengthSeed) {
         const arr = getArrayWithRandomPairs(arrLengthSeed);
         const result = solution(arr);
-        console.log(result);
+        // console.log(result);
       }
     ));
   });
@@ -20,7 +20,7 @@ describe('Odd occurences in Array', function() {
 function getArrayWithRandomPairs(arrLengthSeed) {
   // Generate array of odd length with pairs
   arrLengthSeed = Math.floor(arrLengthSeed / 2);
-  console.log('arrLength', arrLengthSeed);
+  // console.log('arrLength', arrLengthSeed);
 
   if (arrLengthSeed == 0) {
     arrLengthSeed = 1;

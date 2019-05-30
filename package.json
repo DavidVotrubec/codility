@@ -15,5 +15,8 @@
   "devDependencies": {
     "fast-check": "^1.10.0",
     "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "expect.js": "^0.3.1"
   }
 }

@@ -8,10 +8,10 @@ describe('Find missing item in Array', function() {
       fc.assert(fc.property(
         fc.nat(10), function(arrLengthSeed) {
           const arr = generateArray(arrLengthSeed);
-            console.log('Array is ', arr);
+            // console.log('Array is ', arr);
 
           const result = solution(arr);
-          console.log(result);
+          // console.log(result);
         }
       ));
     });

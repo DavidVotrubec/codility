@@ -41,19 +41,34 @@
 
 function solution(A) {
     const len = A.length;
-    const halfIndex = len % 2 > 0 
-        ? len / 2 + 1
-        : (len / 2);
+    // const halfIndex = Math.floor(len/2);
 
     let min = Number.MAX_SAFE_INTEGER;
+    // const partA = A.slice(0, halfIndex);
+    // const partB = A.slice(halfIndex, len);
 
-    // TODO: This is place for optimalization
-    // I am iterating A via sumArr() inside for-loop
-    for (var i=1; i < halfIndex; i++) {
-        const sumA = sumArr(A.slice(0, i));
-        const sumB = sumArr(A.slice(i, len));
+    // optimization hack:
+    // Do not call sumArr in a loop, but just add/remove to a variable
+    let sumA = A[0];
+    let sumB = sumArr(A.slice(1, len));
 
-        const diff = Math.abs(sumA - sumB);
+    let diff = Math.abs(sumA - sumB);
+    if (diff < min) {
+        min = diff;
+    }
+
+    if (len <= 2) {
+        return min;
+    }
+
+    for (var i=0; i < len; i++) {
+        let item = A[i];
+        sumA += item;
+        sumB -= item;
+        diff = Math.abs(sumA - sumB);
+
+        console.log(A, item, sumA, sumB, i, diff);
+
         if (diff < min) {
             min = diff;
         }
@@ -63,5 +78,7 @@ function solution(A) {
 }
 
 function sumArr(arr) {
-    return arr.reduce((partial_sum, a) => partial_sum + a,0);
+    return arr.reduce((partial_sum, a) => partial_sum + a, 0);
 }
+
+module.exports = solution;
