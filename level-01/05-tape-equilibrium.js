@@ -67,7 +67,7 @@ function solution(A) {
         sumB -= item;
         diff = Math.abs(sumA - sumB);
 
-        console.log(A, item, sumA, sumB, i, diff);
+        // console.log(A, item, sumA, sumB, i, diff);
 
         if (diff < min) {
             min = diff;
